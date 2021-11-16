@@ -276,15 +276,20 @@ h1, h2, h3, h4, h5, h6 {
 /* about */
 
 .about{
-    margin-top: 80px;
+    margin: 80px -15px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .about__item{
-    position: relative;
-    width: 380px;
+    width: 33.3333%;
+    padding: 0 15px;
+}
+
+.about__inner{
     background-color: #95e1d3;
+    position: relative;
 }
 
 .about__img{
@@ -325,12 +330,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about__img img{
+    display: block;
+    max-width: 100%;
+    height: auto;
     transition: opacity .2s linear;
 }
 
-img{
+/* img{
     display: block;
-}
+} */
 
 /* statictics */
 
@@ -1163,7 +1171,7 @@ img{
 }
 
 
-
+/* media */
 
 @media(max-width: 1230px) {
 
@@ -1187,6 +1195,26 @@ img{
     .intro__title {
         font-size: 80px;
     }
+
+    /* stat */
+    .stat{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .stat__item{
+        flex: none;
+        width: 33.3333%;
+        padding: 10px 0;
+
+
+        transform: scale(0.7);
+        border: 0;
+    }
+
+    .stat__item:last-child{
+        border: 0;
+    }
 }
 
 
@@ -1197,9 +1225,38 @@ img{
         display: none;
     }
 
+    /* section */
+    .section{
+        padding: 40px;
+    }
+    
+    .section__header{
+        margin-bottom: 20px;
+    }
+
+    /* about__item */
+    .about{
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .about__item{
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 410px;
+    }
+
+    .about__item:last-child{
+        margin-bottom: 0;
+    }
+
     /* slider */
     .slider__item-text{
         display: none;
+    }
+
+    .slider__item.active::before{
+        width: 50%;
     }
 
 }
@@ -1215,8 +1272,25 @@ img{
     .intro__title {
         font-size: 40px;
     }
+
+    /* section */
+    .section__title {
+        font-size: 24px;
+    }
+
+    .section__subtitle {
+        font-size: 20px;
+    }
+
+    .section__title:after{
+        margin: 20px auto;
+    }
+
+    .section__header{
+        margin: 0px auto 20px;
+    }
+
+    .about {
+        margin: 20px -15px 0;
 }
 
-@media(max-width: 740px) {
-
-}
