@@ -98,6 +98,54 @@ h1, h2, h3, h4, h5, h6 {
     color: #fce38a;
 }
 
+/* nav-toggle */
+.nav-toggle{
+    width: 30px;
+    padding: 10px 0;
+
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    z-index: 1;
+}
+
+.nav-toggle__item{
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    background-color: #fff;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.nav-toggle__item::after,
+.nav-toggle__item::before{
+    content: "";
+    width: 100%;
+    height: 3px;
+
+    background-color: #fff;
+
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.nav-toggle__item::after{
+    top: -8px;
+}
+
+.nav-toggle__item::before{
+    bottom: -8px;
+}
+
+
 /* button */
 
 .btn {
@@ -130,6 +178,9 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     width: 100%;
     height: 100vh;
+    min-height: 820px;
+    position: relative;
+
     background: url("../scr/img`s/intro.jpg") center no-repeat;
     background-size: cover;
 }
@@ -1318,6 +1369,10 @@ img{
 
 
     /* footer */
+    .footer {
+        padding-top: 40px;
+    }
+
     .insta-photo{
         width: 33%;
         border: 2px solid transparent;
@@ -1334,10 +1389,6 @@ img{
         width: 100%;
     }
 
-    .footer__col_second{
-        
-    }
-
     .footer__inner{
         justify-content: center;
     }
@@ -1350,6 +1401,11 @@ img{
 
 @media(max-width: 770px) {
 
+    /* intro */
+    .intro{
+        min-height: 650px;
+    }
+
     /* nav */
     .nav{
         display: none;
@@ -1357,12 +1413,12 @@ img{
 
     /* section */
     .section{
-        padding: 40px;
+        padding: 40px 0;
     }
-
+/* 
     .section_background{
         padding: 40px 0 0 0;
-    }
+    } */
     
     .section__header{
         margin-bottom: 20px;
@@ -1499,6 +1555,7 @@ img{
 @media(max-width: 575px) {
 
     /* intro */
+
     .intro__subtitle{
         font-size: 22px;
     }
@@ -1645,6 +1702,10 @@ img{
     }
 
     /* blogs */
+    .blogs__title{
+        margin-bottom: 10px;
+    }
+
     .blogs__item img{
         width: 80px;
         height: auto;
@@ -1654,4 +1715,18 @@ img{
         font-size: 10px;
         font-weight: 300;
     }
+
+    /* footer */
+    .footer__inner{
+        padding-bottom: 10px;
+    }
+
+    .social__content {
+        padding: 20px 0 20px 0;
+        font-style: italic;
+        font-size: 14px;
+        font-weight: 200;
+    }
+
 }
+
