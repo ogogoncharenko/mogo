@@ -1310,13 +1310,6 @@ img{
 
 /* media */
 
-@media(min-width: 1230px) {
-
-    /* accordion__btn */
-    .accordion__btn:hover{
-        border-top: 3px solid #746a6a;
-        border-right: 3px solid #746a6a;
-    }
 
 @media(max-width: 1230px) {
 
@@ -1344,6 +1337,7 @@ img{
     .footer__col_third{
         width: 180px;
     }
+
 }
 
 @media(max-width: 990px) {
