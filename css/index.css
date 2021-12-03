@@ -588,12 +588,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-50%) rotate(-45deg);
 }
 
-.accordion__btn:hover{
-    border-top: 3px solid #746a6a;
-    border-right: 3px solid #746a6a;
-}
-
-
 .accordion__item.active
 .accordion__content{
     display: block;
@@ -1315,6 +1309,14 @@ img{
 
 
 /* media */
+
+@media(min-width: 1230px) {
+
+    /* accordion__btn */
+    .accordion__btn:hover{
+        border-top: 3px solid #746a6a;
+        border-right: 3px solid #746a6a;
+    }
 
 @media(max-width: 1230px) {
 
