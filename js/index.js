@@ -1,14 +1,29 @@
 let navtoggle = document.querySelector('.nav-toggle');
 let navActive = document.querySelector('.nav_active');
+let navLinks = document.querySelectorAll('.nav__link');
 let windowSize = window.matchMedia("(min-width: 770px)");
 let headerLine = document.querySelector('.header');
 let headerInner = document.querySelector('.header__inner');
-let showScroll = document.getElementById('showScroll');
 let sticky = headerInner.scrollTop;
-let accordionButton = document.querySelector('.accordion__header:after');
-console.log(accordionButton);
+let accordionMain = document.querySelector('.accordion');
+let accordionItem = document.querySelectorAll('.accordion__item')
 
 
+// accordion shower
+accordionMain.addEventListener('click', () => {
+
+    if (event.target.dataset.number === 'number1') {
+        accordionItem[0].classList.toggle('active');
+
+    } else if (event.target.dataset.number === 'number2') {
+        accordionItem[1].classList.toggle('active');
+
+    } else if (event.target.dataset.number === 'number3') {
+        accordionItem[2].classList.toggle('active');
+    }
+});
+
+// nav shower
 navtoggle.addEventListener('click', function() {
     navtoggle.classList.add('active');
     console.log(navtoggle.classList);
@@ -16,16 +31,24 @@ navtoggle.addEventListener('click', function() {
     if (navActive.style.display != 'block') {
         navActive.style.display = 'block';
         console.log(navActive.style.display);
+        
     } else {
         navActive.style.display = 'none';
         console.log(navActive.style.display);
         navtoggle.classList.remove('active');
     }
 
+    navActive.addEventListener('click', function(event) {
+        console.log(event.target);
+        navActive.style.display = '';
+        navtoggle.classList.remove('active');
+        }
+    )
 })
+    
 
+// nav remover
 function NavStyleRemover(windowSize) {
-    console.log(windowSize);
     if (windowSize.matches) { // If the media request matches
         navActive.style.display = "";
     } else {}
@@ -34,10 +57,10 @@ function NavStyleRemover(windowSize) {
 NavStyleRemover(windowSize);
 windowSize.addEventListener('change', NavStyleRemover);
 
+// header holder
+window.onscroll = function() {scrollInspector()};
 
-window.onscroll = function() {myFunction()};
-
-function myFunction() {
+function scrollInspector() {
     if (window.scrollY > sticky) {
         headerInner.classList.add("header_fixed-large");
         headerLine.classList.add("header_line");
@@ -47,8 +70,3 @@ function myFunction() {
     }
 }
 
-accordionButton.addEventListener('click', accordionButtonClicked);
-
-function accordionButtonClicked(value) {
-        console.log(value);
-}
