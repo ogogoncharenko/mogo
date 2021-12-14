@@ -233,7 +233,7 @@ button{
     min-height: 820px;
     position: relative;
 
-    background: url("../scr/imgs/intro.jpg") center no-repeat;
+    background: url("../src/imgs/intro.jpg") center no-repeat;
     background-size: cover;
 }
 
@@ -321,7 +321,7 @@ button{
 
 .section_background{
     padding-bottom: 0;
-    background: url("../scr/imgs/UNIQUE DESIGN/Background 2.png")
+    background: url("../src/imgs/UNIQUE DESIGN/Background 2.png")
     center no-repeat;
     background-size: cover;
     margin-bottom: 40px;
@@ -367,7 +367,7 @@ button{
 }
 
 .section_clients{
-    background: center no-repeat url('../scr/imgs/Happy Clients/bg.png');
+    background: center no-repeat url('../src/imgs/Happy Clients/bg.png');
     background-size: cover;
 }
 
@@ -375,7 +375,7 @@ button{
     height: 200px;
     width: auto;
     padding: 40px 0;
-    background: center no-repeat url('../scr/imgs/Map/bg.png');
+    background: center no-repeat url('../src/imgs/Map/bg.png');
 }
 /* about */
 
