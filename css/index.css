@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 15px;
 }
 
+button{
+    border: none;
+    background: none;
+}
 /* header */
 
 .header {
@@ -229,7 +233,7 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 820px;
     position: relative;
 
-    background: url("../scr/img`s/intro.jpg") center no-repeat;
+    background: url("../scr/imgs/intro.jpg") center no-repeat;
     background-size: cover;
 }
 
@@ -317,7 +321,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section_background{
     padding-bottom: 0;
-    background: url("../scr/img`s/UNIQUE DESIGN/Background 2.png")
+    background: url("../scr/imgs/UNIQUE DESIGN/Background 2.png")
     center no-repeat;
     background-size: cover;
     margin-bottom: 40px;
@@ -363,7 +367,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section_clients{
-    background: center no-repeat url('../scr/img`s/Happy Clients/bg.png');
+    background: center no-repeat url('../scr/imgs/Happy Clients/bg.png');
     background-size: cover;
 }
 
@@ -371,7 +375,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 200px;
     width: auto;
     padding: 40px 0;
-    background: center no-repeat url('../scr/img`s/Map/bg.png');
+    background: center no-repeat url('../scr/imgs/Map/bg.png');
 }
 /* about */
 
