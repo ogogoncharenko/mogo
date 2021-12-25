@@ -1,50 +1,47 @@
 let navtoggle = document.querySelector('.nav-toggle');
 let navActive = document.querySelector('.nav_active');
 let navLinks = document.querySelectorAll('.nav__link');
+let navToggleItem = document.querySelector('.nav-toggle__item');
+
 let windowSize = window.matchMedia("(min-width: 770px)");
 let headerLine = document.querySelector('.header');
 let headerInner = document.querySelector('.header__inner');
 let sticky = headerInner.scrollTop;
+
 let accordionMain = document.querySelector('.accordion');
 let accordionItem = document.querySelectorAll('.accordion__item')
 
-
 // accordion shower
-accordionMain.addEventListener('click', () => {
+accordionMain.addEventListener('click', accordionController);
 
-    if (event.target.dataset.number === 'number1') {
+function accordionController(e){
+    let target = e.target;
+    if (target.dataset.number === 'number1') {
         accordionItem[0].classList.toggle('active');
 
-    } else if (event.target.dataset.number === 'number2') {
+    } else if (target.dataset.number === 'number2') {
         accordionItem[1].classList.toggle('active');
 
-    } else if (event.target.dataset.number === 'number3') {
+    } else if (target.dataset.number === 'number3') {
         accordionItem[2].classList.toggle('active');
     }
-});
+};
 
 // nav shower
-navtoggle.addEventListener('click', function() {
-    navtoggle.classList.add('active');
-    console.log(navtoggle.classList);
+document.addEventListener('click', navController);
 
-    if (navActive.style.display != 'block') {
-        navActive.style.display = 'block';
-        console.log(navActive.style.display);
-        
-    } else {
-        navActive.style.display = 'none';
-        console.log(navActive.style.display);
-        navtoggle.classList.remove('active');
+function navController(e){
+    let target = e.target;
+    if (target == navtoggle || target == navToggleItem){
+        console.log("navtoggle or navToggleItem");
+        navtoggle.classList.toggle('active');
+        navActive.classList.toggle('nav_activ_btn');
     }
-
-    navActive.addEventListener('click', function(event) {
-        console.log(event.target);
-        navActive.style.display = '';
+    else if(target !== navtoggle && target !== navToggleItem){
         navtoggle.classList.remove('active');
-        }
-    )
-})
+        navActive.classList.remove('nav_activ_btn');
+    }
+}
     
 
 // nav remover

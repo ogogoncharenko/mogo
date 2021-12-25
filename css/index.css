@@ -81,6 +81,7 @@ button{
     font-size: 30px;
     font-weight: 700;
     color: white;
+    text-decoration: none;
 }
 
 /* nav */
@@ -138,6 +139,7 @@ button{
 
     position: absolute;
     right: 24px;
+    bottom: 10px;
     z-index: 1;
     border: 0;
     background: none;
@@ -195,7 +197,7 @@ button{
 
 .nav-toggle.active .nav-toggle__item::after{
     transform-origin: left bottom;
-    transform: rotate(45deg) translate(-4px);;
+    transform: rotate(45deg) translate(-4px);
 }
 
 /* button */
@@ -1456,7 +1458,7 @@ img{
     }
 
     .header__logo{
-        font-size: 28px;
+        font-size: 28px;      
     }
 
     /* intro */
@@ -1465,6 +1467,7 @@ img{
     }
 
     /* nav */
+
     .nav_active{
         display: none;
         width: 100%;
@@ -1473,6 +1476,10 @@ img{
         left: 0;
         background-color: #e88683;
         transition: width 4s ease-in-out 1s;
+    }
+
+    .nav_activ_btn{
+        display: block;
     }
 
     .nav__link{
